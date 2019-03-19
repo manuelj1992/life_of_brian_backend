@@ -1,0 +1,5 @@
+[run]
+include = works_single_view/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin

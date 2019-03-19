@@ -1,0 +1,19 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=no
+#IPYTHONDIR=/app/.ipython
+# Redis
+# ------------------------------------------------------------------------------
+#REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+CELERY_BROKER_URL=amqp://urser:tucontrapassword@127.0.0:5673/
+# Flower
+#CELERY_FLOWER_USER=debug
+#CELERY_FLOWER_PASSWORD=debug
+
+# If you want to use postgres but I don't have time to donwload even Internet hahahahaha
+# DATABASE_URL=psql://urser:tucontrapassword@127.0.0:8458/database
+SQLITE_URL=sqlite:///my-local-sqlite.db
+
