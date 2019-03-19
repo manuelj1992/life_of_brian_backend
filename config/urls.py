@@ -4,9 +4,19 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from rest_framework_swagger.views import get_swagger_view
+from django.conf.urls import url
+
+schema_view = get_swagger_view(title='Life of Brian API')
+
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    url(r'^$', schema_view),
+
+    # URLs para servicios REST
+    url(r'^api/', include('works_single_view.apis.worksingle.urls')),
+
+    #path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),

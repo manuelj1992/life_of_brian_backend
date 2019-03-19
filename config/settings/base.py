@@ -60,6 +60,8 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
+    # Swaggerizable
+    'rest_framework_swagger',
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -71,6 +73,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "works_single_view.users.apps.UsersAppConfig",
     # Your stuff: custom apps go here
+    "works_single_view.apps.worksingle.apps.WorksingleConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

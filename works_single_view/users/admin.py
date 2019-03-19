@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 
 from works_single_view.users.forms import UserChangeForm, UserCreationForm
 
-from .models import Contributors, WorksSingle
+
 
 User = get_user_model()
 
@@ -19,5 +19,4 @@ class UserAdmin(auth_admin.UserAdmin):
     search_fields = ["name"]
 
 
-admin.site.register(Contributors)
-admin.site.register(WorksSingle)
+
